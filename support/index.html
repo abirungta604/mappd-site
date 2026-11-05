@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>mappd Support</title>
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Help and FAQ for mappd: Travel Map Tracker by Grillz App Studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&display=swap">
+<style>
+  /* Layout: brand-blue masthead with a sticker wordmark, a column of tap-to-open answers, then an ink contact card. */
+  :root {
+    --ocean: #3A47FF;
+    --ink: #111111;
+    --yellow: #FFC93C;
+    --bg: #FFFFFF;
+    --fg: #16171D;
+    --muted: #4C5163;
+    --soft: #F3F4FF;
+    --line: #E3E5F2;
+    --link: #2F3BE0;
+    --masthead-fg: #FFFFFF;
+    --card: #111111;
+    --card-fg: #FFFFFF;
+    --display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+    --body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0F1018; --fg: #ECEDF5; --muted: #A9ADC2; --soft: #191B2A; --line: #262940; --link: #9AA3FF; --card: #1E2032;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F1018; --fg: #ECEDF5; --muted: #A9ADC2; --soft: #191B2A; --line: #262940; --link: #9AA3FF; --card: #1E2032;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.65 var(--body); -webkit-text-size-adjust: 100%; }
+  .wrap { max-width: 44rem; margin: 0 auto; padding-inline: 20px; }
+  header { background: var(--ocean); color: var(--masthead-fg); padding-block: 44px 52px;
+    background-image: radial-gradient(rgba(255,255,255,.16) 1.3px, transparent 1.6px); background-size: 18px 18px; }
+  .brand { display: inline-flex; align-items: baseline; gap: 6px; font: 800 30px/1 var(--display); letter-spacing: -0.03em; }
+  .brand i { font-style: normal; width: 12px; height: 12px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg) translateY(-6px);
+    background: var(--yellow); border: 2.5px solid var(--ink); display: inline-block; }
+  h1 { font: 800 clamp(2.1rem, 7vw, 3rem)/1 var(--display); letter-spacing: -0.04em; margin: 22px 0 10px; text-wrap: balance; }
+  h1 span { display: inline-block; background: var(--yellow); color: var(--ink); padding: 2px 12px 6px; border: 3px solid var(--ink);
+    border-radius: 14px; box-shadow: 4px 4px 0 var(--ink); transform: rotate(-2deg); }
+  header p { margin: 0; opacity: .92; font-size: 15px; }
+  main { padding-block: 32px 56px; display: flex; flex-direction: column; gap: 14px; }
+  h2 { font: 800 1.35rem/1.25 var(--display); letter-spacing: -0.02em; margin: 0 0 4px; text-wrap: balance; }
+  details { background: var(--soft); border: 2.5px solid var(--ink); border-radius: 16px; padding: 0 20px; box-shadow: 3px 3px 0 var(--ink); }
+  details[open] { box-shadow: 4px 4px 0 var(--yellow), 4px 4px 0 2.5px var(--ink); }
+  summary { cursor: pointer; font-weight: 700; padding: 15px 30px 15px 0; list-style: none; position: relative; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; position: absolute; right: 0; top: 9px; font: 800 26px/1 var(--display); color: var(--link); }
+  details[open] summary::after { content: "–"; }
+  details p, details ol { margin: 0 0 16px; }
+  ol { padding-left: 22px; }
+  a { color: var(--link); text-underline-offset: 3px; overflow-wrap: anywhere; }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; border-radius: 4px; }
+  .contact { margin-top: 18px; background: var(--card); color: var(--card-fg); border-radius: 18px; padding: 24px; }
+  .contact h2 { color: var(--card-fg); }
+  .contact p { margin: 0 0 14px; }
+  .email { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .email code { font: 700 1.05rem var(--body); user-select: all; color: var(--ink); background: var(--yellow); border-radius: 10px; padding: 6px 12px; }
+  .email button { font: 700 14px var(--body); color: var(--card-fg); background: transparent; border: 2px solid var(--card-fg); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+  footer { border-top: 1px solid var(--line); padding-block: 22px 40px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">mappd<i aria-hidden="true"></i></div>
+    <h1>mappd <span>Support</span></h1>
+    <p>Quick answers to help you get the most out of your map.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2>Frequently asked questions</h2>
+
+  <details open>
+    <summary>How do I add countries?</summary>
+    <p>Tap the <strong>+</strong> button on the map, then search or scroll to find a country. Mark it <strong>Been there</strong> to color it in, or switch to <strong>Wishlist</strong> to save it for later. Tap any country on the map to open its page, where you can add trips, cities, photos and the year you first visited.</p>
+  </details>
+
+  <details>
+    <summary>How do I restore my purchase?</summary>
+    <p>If you've already subscribed to mappd Pro (for example on a new iPhone), tap <strong>Restore</strong> at the top of the mappd Pro screen, or open <strong>About &amp; settings</strong> and tap <strong>Restore purchases</strong>. Make sure you're signed in with the same Apple ID you used to subscribe.</p>
+  </details>
+
+  <details>
+    <summary>How do I cancel my subscription?</summary>
+    <p>Subscriptions are managed by Apple. On your iPhone:</p>
+    <ol>
+      <li>Open <strong>Settings</strong> and tap your name.</li>
+      <li>Tap <strong>Subscriptions</strong>, then <strong>mappd</strong>.</li>
+      <li>Tap <strong>Cancel Subscription</strong>.</li>
+    </ol>
+    <p>Cancel at least 24 hours before the end of your current period to avoid being charged for the next one. Deleting the app does not cancel your subscription.</p>
+  </details>
+
+  <details>
+    <summary>How do I reset my map?</summary>
+    <p>Open <strong>About &amp; settings</strong> (from the Passport or Timeline tab) and tap <strong>Reset map</strong> at the bottom. This permanently erases your countries, trips, cities and photos from mappd, so you can start fresh. It can't be undone.</p>
+  </details>
+
+  <details>
+    <summary>Where is my data stored?</summary>
+    <p>On your iPhone, and nowhere else. mappd has no account and doesn't upload your travel data to any server. Your data is included in your normal iPhone or iCloud backups, so restoring a backup brings your map back. Read more in our <a href="/privacy/">Privacy Policy</a>.</p>
+  </details>
+
+  <section class="contact" aria-labelledby="help">
+    <h2 id="help">Still need help?</h2>
+    <p>Email us with your iPhone model and iOS version, and we'll get back to you as soon as we can.</p>
+    <div class="email">
+      <code id="email">abi@grillz.studio</code>
+      <button type="button" id="copy">Copy email</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Grillz App Studio · mappd: Travel Map Tracker · <a href="/privacy/">Privacy Policy</a></div>
+</footer>
+
+<script>
+  document.getElementById("copy").addEventListener("click", function () {
+    var btn = this, text = document.getElementById("email").textContent;
+    var done = function () { btn.textContent = "Copied"; setTimeout(function () { btn.textContent = "Copy email"; }, 1600); };
+    var select = function () { var r = document.createRange(); r.selectNodeContents(document.getElementById("email")); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(done, select); } else { select(); }
+  });
+</script>
+</body>
+</html>
